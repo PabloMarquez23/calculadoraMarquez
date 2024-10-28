@@ -1,0 +1,27 @@
+<section id="agregar-curso">
+    <h2>Registrar nueva calculadora</h2>
+    <form id="course-form" (ngSubmit)="agregarCalculadora($event)">
+        <label for="first-number">INGRESE EL PRIMER NUMERO:</label>
+        <input type="number" id="course-name" [(ngModel)]="first-number"  placeholder="Ingresa primer numero" required name="first-number">
+
+        <label for="second-number">INGRESE EL SEGUNDO NUMERO:</label>
+        <input type="number" id="second-number" [(ngModel)]="second-number"  required name="instructor-name">
+        <button type="submit">INGRESAR NUMEROS</button>
+    </form>
+</section>
+
+<section id="calculadora" class="container">
+    <h2>Lista de Cursos</h2>
+    <div *ngFor="let curso of getCalculadora(); let i = index" class="curso-card">
+      <h3><strong>Nombre del curso:</strong> {{ calculadora.first-number }}</h3>
+      <p><strong>Profesor:</strong> {{ calculadora.second-number }}</p>
+      <div class="button-group">
+        <button class="btn btn-info" (click)="verDetalles(curso)">Ver calculos</button>
+        <button class="btn btn-danger" (click)="eliminarCurso(curso)">Eliminar Calculadora</button>
+      </div>
+  
+      <!-- Sección de Detalles -->
+      <div *ngIf="cursoSeleccionadoId === i" class="curso-detalles">
+        <p><strong>Descripción:</strong> {{ curso.descripcion }}</p>
+        
+    </div>

@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Fondo más claro y moderno */
+  }
+  
+  header {
+    background-color: #0056b3; /* Azul más elegante */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #333; /* Color más elegante para la barra lateral */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .menu nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444; /* Línea separadora más suave */
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu nav a:hover {
+    background-color: #0056b3; /* Color de fondo con hover más moderno */
+  }
+  
+  main {
+    margin-left: 240px; /* Espacio para la barra de navegación */
+    padding: 30px;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra para el contenido */
+  }
+  
+  /* Contenedor para la imagen */
+  main .image-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio inferior para separar la imagen del contenido */
+  }
+  
+  main .image-container img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  footer {
+    margin-left: 240px;
+    padding: 15px;
+    background-color: #f1f1f1; /* Fondo del pie de página claro */
+    color: #333; /* Texto del pie de página */
+    text-align: center;
+    border-top: 1px solid #ddd; /* Línea superior en el footer */
+  }
+  
+  /* Estilo de los botones o enlaces dentro de secciones */
+  main section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  main section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  main section a:hover {
+    background-color: #003d80; /* Hover más oscuro */
+  }
+  
+  /* Media queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .menu {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    main {
+      margin-left: 0;
+      padding: 15px;
+    }
+  
+    footer {
+      margin-left: 0;
+    }
+  
+    main .image-container img {
+      max-width: 80%; /* Tamaño más grande en pantallas pequeñas */
+    }
+  }
